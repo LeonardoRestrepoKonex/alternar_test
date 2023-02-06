@@ -4,7 +4,7 @@ LABEL author="Leonardo Restrepo"
 
 WORKDIR /build
 COPY . .
-copy .env_qa .env
+COPY .env_qa .env
 RUN npm i --force --legacy-peer-deps
 RUN npm run build
 EXPOSE 8894

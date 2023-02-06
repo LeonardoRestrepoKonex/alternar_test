@@ -6,7 +6,7 @@
             "name": NAME,
 	        "essential": true,
             "cpu": 1024,
-            "memoryReservation": 1024,
+            "memoryReservation": 2048,
             "portMappings": [
                 {
                     "containerPort": 8894,
@@ -16,7 +16,7 @@
         }
     ],
     "cpu": "1024",
-    "memory": "1024",
+    "memory": "2048",
     "requiresCompatibilities": [
              "FARGATE"
     ],

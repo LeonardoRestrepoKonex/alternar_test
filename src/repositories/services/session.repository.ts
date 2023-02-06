@@ -1,5 +1,3 @@
-import CoreConfig from '../../config/types/core';
-
 import { Session } from '../../entities/index.entity';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
@@ -12,7 +10,6 @@ export class SessionRepositoryService {
     private config: ConfigService,
     @InjectRepository(Session) private sessionRepository: Repository<Session>,
   ) {}
-  CORE = this.config.get<CoreConfig>('core');
 
   async getPlayerSessionByToken(token: string): Promise<any> {
     return await this.sessionRepository

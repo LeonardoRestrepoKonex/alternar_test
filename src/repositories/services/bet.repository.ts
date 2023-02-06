@@ -1,4 +1,3 @@
-import CoreConfig from '../../config/types/core';
 import {
   CreateBetStakeItemDTO,
   CreateBetTransactionItemDTO,
@@ -30,7 +29,6 @@ export class BetRepositoryService {
     @InjectRepository(Market)
     private marketRepository: Repository<Market>,
   ) {}
-  CORE = this.config.get<CoreConfig>('core');
 
   async getAllBets(page: number, perPage: number): Promise<any[]> {
     return await this.betRepository

@@ -101,7 +101,7 @@ export class AlternarService {
         LastName: data.lastName,
         UserBalance: data.balance,
       },
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<CreateUserRepositoryRequestDTO>(
       '/api/Bonus/CreateUser/json',
@@ -124,7 +124,7 @@ export class AlternarService {
       ExtUserId: data.userId,
       BonusCode: data.bonusId,
       Deposit: data.amount,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<CreateBonusByCodeRespositoryRequestDTO>(
       '/api/Bonus/CreateBonusByCode/json',
@@ -147,7 +147,7 @@ export class AlternarService {
       ExtUserId: data.userId,
       BonusPlanId: data.bonusPlanId,
       Deposit: data.amount,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<CreateBonusByDepositRepositoryRequestDTO>(
       '/api/Bonus/CreateBonusByCode/json',
@@ -168,7 +168,7 @@ export class AlternarService {
   ): Promise<any> {
     const body = {
       ExtUserId: data.userId,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<GetClientBonusInfoRepositoryRequestDTO>(
       '/api/Bonus/GetClientBonusInfo/json',
@@ -189,7 +189,7 @@ export class AlternarService {
   ): Promise<any> {
     const body = {
       ExtUserId: data.userId,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<GetClientOpenBonusesRepositoryRequestDTO>(
       '/api/Bonus/GetClientOpenBonuses/json',
@@ -211,7 +211,7 @@ export class AlternarService {
     const body = {
       ExtUserId: data.userId,
       DateFrom: data.date,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<GetClientBonusHistoryRepositoryRequestDTO>(
       '/api/Bonus/GetClientBonusHistory/json',
@@ -233,7 +233,7 @@ export class AlternarService {
     const body = {
       ExtUserId: data.userId,
       DateFrom: data.date,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<CancelClientBonusRepositoryRequestDTO>(
       '/api/Bonus/CancelClientBonus/json',
@@ -254,7 +254,7 @@ export class AlternarService {
   ): Promise<any> {
     const body = {
       ExtUserId: data.userId,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<CancelAllClientBonusesRepositoryRequestDTO>(
       '/api/Bonus/CancelAllClientBonuses/json',
@@ -295,7 +295,7 @@ export class AlternarService {
   ): Promise<any> {
     const body = {
       ExtUserId: data.userId,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result =
       this.http.post<GetCurrentBonusCampsByExtUserIdRepositoryeRequestDTO>(
@@ -318,7 +318,7 @@ export class AlternarService {
     const body = {
       ExtUserId: data.userId,
       BonusTypeIds: data.types,
-      WalletCode: this.config.get<string>('alternar.walletCode'),
+      WalletCode: process.env.WALLET_CODE,
     };
     const result = this.http.post<GetBonusPlansForClientRepositoryRequestDTO>(
       '/api/Bonus/GetBonusPlansForClient/json',

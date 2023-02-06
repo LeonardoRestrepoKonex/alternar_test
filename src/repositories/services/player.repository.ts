@@ -1,5 +1,3 @@
-import CoreConfig from '../../config/types/core';
-
 import { Player } from '../../entities/index.entity';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
@@ -12,7 +10,6 @@ export class PlayerRepositoryService {
     private config: ConfigService,
     @InjectRepository(Player) private playerRepository: Repository<Player>,
   ) {}
-  CORE = this.config.get<CoreConfig>('core');
 
   async getPlayerByEmail(email: string): Promise<any> {
     return await this.playerRepository

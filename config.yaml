@@ -1,0 +1,21 @@
+core:
+  database:
+    host: redcap-instance.crkyth6jivb5.us-east-1.rds.amazonaws.com
+    port: 5432
+    username: postgres
+    password: postgres
+    database: redcap_dev
+  environment: DEV
+  jwt:
+    secret: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOiJhZG1pbl9tYW5hZ2VyIiwiaWF0IjoxNjQ5NzkwNDQ0fQ.mfxvhfoOvtEGV_LMO1nWoxgoubuUGh_4xJGADTTAkxE
+  multer:
+    dest: ./upload
+  port: 8894
+  walletCode: '060722'
+  connection:
+    timeout: 60000
+    host: https://sb2bonus-integration-altenar2-stage.biahosted.com
+  swagger:
+    title: Alternar
+    description: Documentation for Alternar services
+    version: 1.0.0

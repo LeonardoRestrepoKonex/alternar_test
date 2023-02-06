@@ -5,8 +5,8 @@
             "image": "IMAGE_REPO:BUILD_NUMBER",
             "name": NAME,
 	        "essential": true,
-            "cpu": 1024,
-            "memoryReservation": 2048,
+            "cpu": 256,
+            "memoryReservation": 512,
             "portMappings": [
                 {
                     "containerPort": 8894,
@@ -15,8 +15,8 @@
             ]
         }
     ],
-    "cpu": "1024",
-    "memory": "2048",
+    "cpu": "256",
+    "memory": "512",
     "requiresCompatibilities": [
              "FARGATE"
     ],

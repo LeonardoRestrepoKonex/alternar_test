@@ -6,6 +6,9 @@ WORKDIR /app
 
 ENV NODE_ENV QA
 
+#Copy .env_qa as .env
+COPY .env_qa /app/.env
+
 #Copy package.json in the image
 COPY package.json ./
 
